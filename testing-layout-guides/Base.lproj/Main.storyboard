@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testing_layout_guides" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSo-it-KhZ">
+                                <color key="backgroundColor" red="0.38948092899999998" green="0.37779543189999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7EV-ed-IKF"/>
+                                    <constraint firstAttribute="width" constant="200" id="t4K-OO-DcK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y7-gl-SXk">
+                                <color key="backgroundColor" red="0.38948092899999998" green="0.37779543189999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7Ie-5d-wEf"/>
+                                    <constraint firstAttribute="width" constant="200" id="OSd-MI-H1D"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ue-kI-Xac">
+                                <color key="backgroundColor" red="0.38948092899999998" green="0.37779543189999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Rha-BK-U4r"/>
+                                    <constraint firstAttribute="width" constant="200" id="pzt-JN-HRp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtX-kq-NA5">
+                                <color key="backgroundColor" red="0.38948092899999998" green="0.37779543189999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LOp-sT-iPi"/>
+                                    <constraint firstAttribute="width" constant="200" id="PfK-bh-NBZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rSo-it-KhZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Jb-VX-Z12"/>
+                            <constraint firstItem="QtX-kq-NA5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bk2-dz-HpZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QtX-kq-NA5" secondAttribute="bottom" constant="8" id="DgC-PI-hIK"/>
+                            <constraint firstItem="8Ue-kI-Xac" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqb-dw-DOn"/>
+                            <constraint firstItem="3Y7-gl-SXk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HKI-qB-oSk"/>
+                            <constraint firstItem="QtX-kq-NA5" firstAttribute="top" secondItem="8Ue-kI-Xac" secondAttribute="bottom" constant="102" placeholder="YES" id="bam-UN-bnU"/>
+                            <constraint firstItem="3Y7-gl-SXk" firstAttribute="top" secondItem="rSo-it-KhZ" secondAttribute="bottom" constant="56" placeholder="YES" id="d7L-Bg-ryK"/>
+                            <constraint firstItem="rSo-it-KhZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nS7-2H-GAB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstView" destination="rSo-it-KhZ" id="jbx-fz-qAB"/>
+                        <outlet property="fourthView" destination="QtX-kq-NA5" id="s5L-Dw-fWd"/>
+                        <outlet property="secondView" destination="3Y7-gl-SXk" id="APi-vS-Ihs"/>
+                        <outlet property="thirdView" destination="8Ue-kI-Xac" id="6yz-Eu-Cqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
